@@ -1,16 +1,21 @@
-# InterpretadorBackend
+## Requisitos
 
-comando para instalar dependencias: pip install -r requirements.txt
+- Python 3.10 o superior
+- `ffmpeg` instalado en el sistema:
+  - **Windows:** `winget install ffmpeg`
+---
 
-correrse con: uvicorn main:app --reload
+## Instalación del entorno
 
-http://localhost:8000/docs
-
+```bash
+# 1. Crear entorno virtual
 python -m venv venv
-.\venv\Scripts\Activate
 
-http://localhost:8000/api/upload post
+# 2. Activar entorno virtual
+# En Windows:
+.\venv\Scripts\activate
+# 3. Instalar dependencias
+pip install -r requirements.txt
 
-python -m uvicorn main:app --reload
-
- pip install git+https://github.com/openai/whisper.git
+# 4. Instalar Whisper desde GitHub (opcional, si lo usás)
+pip install git+https://github.com/openai/whisper.git
