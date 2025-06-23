@@ -19,3 +19,9 @@ pip install -r requirements.txt
 
 # 4. Instalar Whisper desde GitHub (opcional, si lo usás)
 pip install git+https://github.com/openai/whisper.git
+
+
+#IMPORTANTE, crear archivo .env con 
+GROQ_API_KEY=apiKey
+#ejecutar el proyecto
+uvicorn main:app --reload
