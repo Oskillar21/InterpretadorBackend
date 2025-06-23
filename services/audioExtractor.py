@@ -1,5 +1,5 @@
 import os
-from moviepy.editor import VideoFileClip 
+from moviepy import VideoFileClip 
 from uuid import uuid4
 
 def extract_audio_from_video(video_path: str, output_dir: str = "temp") -> str:

@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from fastapi import FastAPI
 from routes.uploadRoutes import router as upload_router
@@ -11,6 +14,10 @@ app = FastAPI(
 # Incluir rutas
 app.include_router(upload_router, prefix="/api", tags=["Transcripción"])
 
-@app.get("/", tags=["Inicio"])
+@app.get("/")
 async def root():
-    return {"message": "API de interpretación de video activa"}
+    return {"message": "API de Interpretación de Video activa"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
