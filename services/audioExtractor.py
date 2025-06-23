@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import config  # Importar configuración de FFmpeg
 from moviepy import VideoFileClip 
 from uuid import uuid4
 
