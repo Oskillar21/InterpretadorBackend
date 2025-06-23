@@ -10,7 +10,7 @@ client = OpenAI(
 
 def resumeText(text: str) -> str:
     response = client.chat.completions.create(
-        model= "meta-llama/llama-4-scout-17b-16e-instruct",
+        model="llama3-8b-8192",  # Modelo válido de Groq
         messages=[
             {"role": "system", "content": "Eres un asistente que resume texto de manera clara y concisa."},
             {"role": "user", "content": f"Resume el siguiente texto:\n{text}"}
