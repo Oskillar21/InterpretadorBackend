@@ -1,0 +1,48 @@
+# Entorno virtual
+venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Archivos temporales / backup
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos de FastAPI/uvicorn
+.env
+.env.*
+
+# Archivos de datos temporales o procesamiento
+*.mp4
+*.mp3
+*.wav
+*.webm
+*.txt
+temp/
+output/
+
+# Pip
+pip-log.txt
+
+# Tests
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.pytest_cache/
