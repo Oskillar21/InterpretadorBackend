@@ -2,14 +2,8 @@ import os
 from moviepy import VideoFileClip 
 from uuid import uuid4
 
-def extract_audio_from_video(video_path: str, output_dir: str = "temp") -> str:
-    """
-    Extrae el audio en formato MP3 de un video dado.
-
-    :param video_path: Ruta del archivo de video.
-    :param output_dir: Carpeta donde se guardará el archivo MP3.
-    :return: Ruta del archivo MP3 generado.
-    """
+def extractAudioFromVideo(video_path: str, output_dir: str = "temp") -> str:
+  
     # Crear carpeta si no existe
     os.makedirs(output_dir, exist_ok=True)
 
