@@ -2,6 +2,15 @@ from fastapi import UploadFile
 from utils.fileHandler import save_upload_file
 from services.audioExtractor import extract_audio_from_video
 from services.transcriber import transcribe_audio
+from services.resume import resumeText
+
+def handle_video_upload(file_path: str):
+    transcript = transcribe_audio(file_path)
+    summary = resumeText(transcript)
+    return {
+        "transcription": transcript,
+        "summary": summary
+    }
 
 def handle_video_upload(file: UploadFile) -> dict:
     try:

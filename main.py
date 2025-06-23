@@ -4,6 +4,8 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from fastapi import FastAPI
 from routes.uploadRoutes import router as upload_router
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(
     title="Interpretador de Video",

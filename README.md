@@ -12,3 +12,5 @@ python -m venv venv
 http://localhost:8000/api/upload post
 
 python -m uvicorn main:app --reload
+
+ pip install git+https://github.com/openai/whisper.git
