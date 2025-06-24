@@ -23,5 +23,11 @@ pip install git+https://github.com/openai/whisper.git
 
 #IMPORTANTE, crear archivo .env con 
 GROQ_API_KEY=apiKey
+
 #ejecutar el proyecto
-uvicorn main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+#Terminar el proceso
+Secuencia completa:
+Apagar servidor: Ctrl + C
+Salir del venv: deactivate
