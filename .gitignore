@@ -31,7 +31,10 @@ Thumbs.db
 *.mp3
 *.wav
 *.webm
+# Ignora todos los .txt
 *.txt
+# Pero NO ignores requirements.txt
+!requirements.txt
 temp/
 output/
 
