@@ -2,9 +2,13 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+# Configurar FFmpeg antes de importar otras dependencias
+import config
+
 from fastapi import FastAPI
 from routes.uploadRoutes import router as upload_router
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 load_dotenv()
 
 app = FastAPI(
@@ -20,7 +24,13 @@ app.include_router(upload_router, prefix="/api", tags=["Transcripción"])
 async def root():
     return {"message": "API de Interpretación de Video activa"}
 
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Puedes limitarlo si quieres
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 if __name__ == "__main__":
     import uvicorn
